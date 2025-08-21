@@ -46,7 +46,7 @@ export default function Orders() {
                 <Title text1={'MY'} text2={'ORDERS'} />
             </div>
             <div>
-                {orderData.slice(0,4).map((product, index) => (
+                {orderData.map((product, index) => (
                   <div key={index} className="py-4 border-t border-b text-gray-700 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                     <div className="flex items-start gap-6 text-sm">
                         <img src={product.image[0]} alt="" className="w-16 sm:w-20" />

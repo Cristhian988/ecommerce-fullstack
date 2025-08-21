@@ -55,7 +55,6 @@ export interface OrderType {
 /** Contexto de la tienda */
 export interface ShopContextType {
   products: ProductType[];
-  orders: OrderType[];
   currency: string;
   delivery_fee: number;
   search: string;

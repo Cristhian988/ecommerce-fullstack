@@ -11,10 +11,10 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { id: "home", name: "HOME", href: "/" },
-  { id: "collection", name: "COLLECTION", href: "/collection" },
-  { id: "about", name: "ABOUT", href: "/about" },
-  { id: "contact", name: "CONTACT", href: "/contact" },
+  { id: "home", name: "INICIO", href: "/" },
+  { id: "collection", name: "PRENDAS", href: "/collection" },
+  { id: "about", name: "NOSOTROS", href: "/about" },
+  { id: "contact", name: "CONTACTO", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -67,19 +67,19 @@ export default function Navbar() {
             <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
               <div className="flex flex-col gap-2 w-36 py-3 px-2.5 bg-slate-100 text-gray-500 rounded">
                 <p className="cursor-pointer hover:text-black hover:bg-gray-200 p-2 rounded">
-                  My Profile
+                  Mi Perfil
                 </p>
                 <p
                   className="cursor-pointer hover:text-black hover:bg-gray-200 p-2 rounded"
                   onClick={() => navigate("/orders")}
                 >
-                  Orders
+                  Mis Ordenes
                 </p>
                 <p
                   className="cursor-pointer hover:text-black hover:bg-gray-200 p-2 rounded"
                   onClick={logout}
                 >
-                  Logout
+                  Cerrar Sesión
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function Navbar() {
             className="flex items-center gap-4 p-3"
           >
             <img src={assets.dropdown_icon} alt="" className="h-4 rotate-180" />
-            <p>Back</p>
+            <p>Atrás</p>
           </div>
           {navLinks.map((link) => (
             <NavLink

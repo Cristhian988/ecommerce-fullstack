@@ -36,7 +36,7 @@ export default function Cart() {
   return (
     <div className="border-t pt-14">
       <div className="text-2xl mb-3">
-        <Title text1={"YOUR"} text2={"CART"} />
+        <Title text1={"TU"} text2={"CARRITO"} />
       </div>
       <div>
         {cartData.map((item, index) => {
@@ -103,7 +103,7 @@ export default function Cart() {
               onClick={() => navigate("/place-order")}
               className="bg-black text-white my-8 py-2 px-6 text-sm active:bg-gray-700"
             >
-              PROCEED TO CHECKOUT
+              PROCEDER AL PAGO
             </button>
           </div>
         </div>

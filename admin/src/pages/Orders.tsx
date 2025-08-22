@@ -83,7 +83,7 @@ export default function Orders({ token }: { token: string }) {
 
   return (
     <>
-      <h3>Order Page</h3>
+      <h3>Todos los Pedidos</h3>
       <div>
         {orders.map((order, idx) => (
           <div className="grid grid-cols-1 sm:grid-cols-[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] items-start gap-3 border-2 border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700" key={idx}>
@@ -108,32 +108,32 @@ export default function Orders({ token }: { token: string }) {
               </div>
               <p className="mt-3 mb-2 font-medium">{order.address.firstName + " " + order.address.lastName}</p>
               <div>
-                <p>{order.address.street + ","}</p>
+                <p>{order.address.street + ", "}</p>
                 <p>
                   {order.address.city +
-                    "," +
+                    ", " +
                     order.address.state +
-                    "," +
+                    ", " +
                     order.address.country +
-                    "," +
+                    ", " +
                     order.address.zipcode}
                 </p>
               </div>
               <p>{order.address.phone}</p>
             </div>
             <div>
-              <p className="text-sm sm:text-[15px]">Items : {order.items.length}</p>
-              <p className="mt-3">Method: {order.paymentMethod}</p>
-              <p>Payment : {order.payment ? "Done" : "Pending"}</p>
-              <p>Date : {new Date(order.date).toLocaleDateString()}</p>
+              <p className="text-sm sm:text-[15px]">Artículos : {order.items.length}</p>
+              <p className="mt-3">Método: {order.paymentMethod}</p>
+              <p>Pago : {order.payment ? "Pagado" : "Pendiente"}</p>
+              <p>Fecha : {new Date(order.date).toLocaleDateString()}</p>
             </div>
             <p className="text-sm sm:text-[15px]">{currency}{order.amount}</p>
             <select value={order.status} onChange={(e) => statusHandler(e, order._id)} className="p-2 font-medium border border-gray-300 rounded-md">
-              <option value="Order Placed">Order Placed</option>
-              <option value="Packing">Packing</option>
-              <option value="Shipped">Shipped</option>
-              <option value="Out for delivery">Out for delivery</option>
-              <option value="Delivered">Delivered</option>
+              <option value="Order Placed">Pedido realizado</option>
+              <option value="Packing">Empaquetado</option>
+              <option value="Shipped">Enviado</option>
+              <option value="Out for delivery">En camino</option>
+              <option value="Delivered">Entregado</option>
             </select>
           </div>
         ))}

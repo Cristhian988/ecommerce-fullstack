@@ -43,7 +43,7 @@ export default function Orders() {
     return (
         <div className="border-t pt-16">
             <div className="text-2xl my-3">
-                <Title text1={'MY'} text2={'ORDERS'} />
+                <Title text1={'MIS'} text2={'ORDENES'} />
             </div>
             <div>
                 {orderData.map((product, index) => (
@@ -54,11 +54,11 @@ export default function Orders() {
                             <p className="sm:text-base font-medium">{product.name}</p>
                             <div className="flex items-center gap-3 mt-1 text-base text-gray-700">
                                 <p className="text-lg">{currency}{product.price}</p>
-                                <p>Quantity: {product.quantity}</p>
-                                <p>Size: {product.size}</p>
+                                <p>Cantidad: {product.quantity}</p>
+                                <p>Talla: {product.size}</p>
                             </div>
-                            <p className="mt-1">Date: <span className="text-gray-400">{new Date(product.date).toDateString()}</span></p>
-                            <p className="mt-1">Payment: <span className="text-gray-400">{product.paymentMethod}</span></p>
+                            <p className="mt-1">Fecha: <span className="text-gray-400">{new Date(product.date).toDateString()}</span></p>
+                            <p className="mt-1">Pago: <span className="text-gray-400">{product.paymentMethod}</span></p>
                         </div>
                     </div>
                     <div className="md:w-1/2 flex justify-between">
@@ -66,7 +66,7 @@ export default function Orders() {
                             <p className="min-w-2 h-2 rounded-full bg-green-500"></p>
                             <p className="text-sm md:text-base">{product.status}</p>
                         </div>
-                        <button onClick={loadOrderData} className="border px-4 py-2 text-sm font-medium rounded-sm cursor-pointer">Track Order</button>
+                        <button onClick={loadOrderData} className="border px-4 py-2 text-sm font-medium rounded-sm cursor-pointer">Seguimiento</button>
                     </div>
                   </div>  
                 ))}

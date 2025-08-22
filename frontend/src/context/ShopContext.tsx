@@ -10,7 +10,7 @@ export const ShopContext = createContext<ShopContextType>(
 );
 
 const ShopContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const currency = "$";
+  const currency = "S/.";
   const delivery_fee = 10;
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const [search, setSearch] = useState("");

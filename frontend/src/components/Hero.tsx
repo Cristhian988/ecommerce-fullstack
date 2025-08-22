@@ -8,11 +8,11 @@ export default function Hero() {
             <div className="text-[#414141]">
                 <div className="flex items-center gap-2">
                     <p className="w-8 md:w-11 h-[2px] bg-[#414141]"></p>
-                    <p className="text-sm font-medium md:text-base">OUR BEST SELLERS</p>
+                    <p className="text-sm font-medium md:text-base">LO MAS VENDIDO</p>
                 </div>
-                <h1 className="playfair text-3xl sm:py-3 lg:text-5xl leading-relaxed">Lastest Arrivals</h1>
+                <h1 className="playfair text-3xl sm:py-3 lg:text-5xl leading-relaxed">Colección Nueva</h1>
                 <div className="flex items-center gap-2">
-                    <p className="text-sm font-semibold md:text-base">SHOP NOW</p>
+                    <p className="text-sm font-semibold md:text-base">DESCÚBRELO YA</p>
                     <p className="w-8 md:w-11 h-[2px] bg-[#414141]"></p>
                 </div>
             </div>

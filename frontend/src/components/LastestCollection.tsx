@@ -15,9 +15,9 @@ export default function LastestCollection() {
   return (
     <div className="my-10">
         <div className="text-center py-8 text-3xl">
-            <Title text1={'LASTEST'} text2={"COLLECTION"} />
+            <Title text1={'ÚLTIMA'} text2={"COLECCIÓN"} />
             <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                Explora la colección más esperada del año con prendas únicas para ti.
             </p>
         </div>
         

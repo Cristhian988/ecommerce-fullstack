@@ -4,8 +4,8 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export default function Login() {
-  const [currentState, setCurrentState] = useState<"Login" | "Sign Up">(
-    "Login"
+  const [currentState, setCurrentState] = useState<"Iniciar Sesión" | "Crear Cuenta">(
+    "Iniciar Sesión"
   );
   const { token, setToken, navigate, backendUrl } = useContext(ShopContext);
 
@@ -16,7 +16,7 @@ export default function Login() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      if (currentState === "Sign Up") {
+      if (currentState === "Crear Cuenta") {
         const response = await axios.post(backendUrl + "/api/user/register", {
           name,
           email,
@@ -63,14 +63,14 @@ export default function Login() {
         <p className="playfair text-3xl">{currentState}</p>
         <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
       </div>
-      {currentState === "Login" ? (
+      {currentState === "Iniciar Sesión" ? (
         ""
       ) : (
         <input
           onChange={(e) => setName(e.target.value)}
           value={name}
           type="text"
-          placeholder="Name"
+          placeholder="Nombre"
           className="w-full px-3 py-2 border border-gray-800"
           required
         />
@@ -87,25 +87,25 @@ export default function Login() {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         type="password"
-        placeholder="Password"
+        placeholder="Contraseña"
         className="w-full px-3 py-2 border border-gray-800"
         required
       />
       <div className="w-full flex justify-between text-sm mt-[-8px]">
-        <p className="cursor-pointer">Forgot Password?</p>
-        {currentState === "Login" ? (
+        <p className="cursor-pointer">¿Olvidaste tu contraseña?</p>
+        {currentState === "Iniciar Sesión" ? (
           <p
-            onClick={() => setCurrentState("Sign Up")}
+            onClick={() => setCurrentState("Crear Cuenta")}
             className="cursor-pointer"
           >
-            Create Account
+            Crear Cuenta
           </p>
         ) : (
           <p
-            onClick={() => setCurrentState("Login")}
+            onClick={() => setCurrentState("Iniciar Sesión")}
             className="cursor-pointer"
           >
-            Log In
+            Iniciar Sesión
           </p>
         )}
       </div>
@@ -113,7 +113,7 @@ export default function Login() {
         type="submit"
         className="w-full bg-black text-white font-light py-2 mt-4"
       >
-        {currentState === "Login" ? "Sign In" : "Sign Up"}
+        {currentState === "Iniciar Sesión" ? "Iniciar Sesión" : "Crear Cuenta"}
       </button>
     </form>
   );

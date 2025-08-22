@@ -75,7 +75,7 @@ export default function Collection() {
       {/* Filter Options */}
       <div className="min-w-60">
         <p className="my-2 text-xl font-medium flex items-center gap-2 cursor-pointer" onClick={() => setShowFilter(!showFilter)}>
-          FILTERS
+          FILTROS
           <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown_icon} alt="" />
         </p>
         {/* Category Filter */}
@@ -84,19 +84,19 @@ export default function Collection() {
             showFilter ? "" : "hidden"
           } sm:block`}
         >
-          <p className="mb-3 text-sm font-medium">CATEGORIES</p>
+          <p className="mb-3 text-sm font-medium">CATEGORÍAS</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
             <p className="flex items-center gap-2">
               <input className="w-3 h-3" type="checkbox" value={"Men"} onChange={toggleCategory} id="men" />
-              <label htmlFor="men">Men</label>
+              <label htmlFor="men">Hombres</label>
             </p>
             <p className="flex items-center gap-2">
               <input className="w-3 h-3" type="checkbox" value={"Women"} onChange={toggleCategory} id="women" />
-              <label htmlFor="women">Women</label>
+              <label htmlFor="women">Mujeres</label>
             </p>
             <p className="flex items-center gap-2">
               <input className="w-3 h-3" type="checkbox" value={"Kids"} onChange={toggleCategory} id="kids" />
-              <label htmlFor="kids">Kids</label>
+              <label htmlFor="kids">Niños</label>
             </p>
           </div>
         </div>
@@ -106,19 +106,19 @@ export default function Collection() {
           showFilter ? "" : "hidden"
         } sm:block`}
       >
-        <p className="mb-3 text-sm font-medium">TYPE</p>
+        <p className="mb-3 text-sm font-medium">TIPO</p>
         <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
           <p className="flex items-center gap-2">
             <input className="w-3 h-3" type="checkbox" value={"Topwear"} onChange={toggleSubCategory} id="topwear" />{" "}
-            <label htmlFor="topwear">Topwear</label>
+            <label htmlFor="topwear">Parte superior</label>
           </p>
           <p className="flex items-center gap-2">
             <input className="w-3 h-3" type="checkbox" value={"Bottomwear"} onChange={toggleSubCategory} id="bottomwear" />{" "}
-            <label htmlFor="bottomwear">Bottomwear</label>
+            <label htmlFor="bottomwear">Parte inferior</label>
           </p>
           <p className="flex items-center gap-2">
             <input className="w-3 h-3" type="checkbox" value={"Winterwear"} onChange={toggleSubCategory} id="winterwear" />{" "}
-            <label htmlFor="winterwear">Winterwear</label>
+            <label htmlFor="winterwear">Prendas de invierno</label>
           </p>
         </div>
       </div>
@@ -127,12 +127,12 @@ export default function Collection() {
       {/* Right Side */}
       <div className="flex-1">
         <div className="flex justify-between text-lg sm:text-2xl mb-4">
-          <Title text1={"ALL"} text2={"COLLECTIONS"} />
+          <Title text1={"TODAS"} text2={"LAS COLECCIONES"} />
           {/* Product Sort */}
           <select onChange={(e) => setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2">
-            <option value="relevant">Sort by: Relevant</option>
-            <option value="low-high">Sort by: Price: Low to High</option>
-            <option value="high-low">Sort by: Price: High to Low</option>
+            <option value="relevant">Ordenar por: Relevantes</option>
+            <option value="low-high">Ordenar por: Precio Bajo a Alto</option>
+            <option value="high-low">Ordenar por: Precio Alto a Bajo</option>
           </select>
         </div>
         

@@ -61,7 +61,7 @@ export default function Product() {
           <p className="mt-5 text-3xl font-medium">{currency}{productData.price}</p>
           <p className="mt-5 text-gray-500 md:w-4/5">{productData.description}</p>
           <div className="flex flex-col gap-4 my-8">
-            <p>Select Size</p>
+            <p>Seleccionar Talla</p>
             <div className="flex gap-2">
               {
                 productData.sizes.map((sizeOption: string, index: number) => {
@@ -72,12 +72,12 @@ export default function Product() {
               }
             </div>
           </div>
-          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white py-2 px-6 text-sm active:bg-gray-700">Add to Cart</button>
+          <button onClick={() => addToCart(productData._id, size)} className="bg-black text-white py-2 px-6 text-sm active:bg-gray-700">Agregar al Carrito</button>
           <hr className="mt-8 sm:w-4/5" />
           <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1">
             <p>100% Original</p>
-            <p>Cash on delivery is available on this product</p>
-            <p>Easy return and exchange policy within 7 days.</p>
+            <p>Pago en Efectivo disponible en este producto</p>
+            <p>Política de devolución y cambio fácil dentro de los 7 días.</p>
           </div>
         </div>
       </div>
@@ -85,12 +85,12 @@ export default function Product() {
       {/* Description & Review Section */}
       <div className="mt-20">
         <div className="flex">
-          <b className="border px-5 py-3 text-sm font-medium">Description</b>
-          <p className="border px-5 py-3 text-sm font-medium">Reviews (122)</p>
+          <b className="border px-5 py-3 text-sm font-medium">Descripción</b>
+          <p className="border px-5 py-3 text-sm font-medium">Reseñas (122)</p>
         </div>
         <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel libero ratione, quas nemo aspernatur quos illum amet esse laboriosam error.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel libero ratione, quas nemo aspernatur quos illum amet esse laboriosam error.</p>
+          <p>Descubre la combinación perfecta entre estilo y comodidad con esta prenda de la colección Forever. Diseñada con materiales de alta calidad, ofrece un ajuste moderno y versátil que se adapta a tu día a día.</p>
+          <p>Ideal para cualquier ocasión, ya sea casual o elegante, este producto está pensado para quienes buscan destacar con confianza y personalidad.</p>
         </div>
       </div>
       
